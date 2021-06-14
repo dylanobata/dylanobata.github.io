@@ -2,11 +2,14 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://dylanobata.github.io/posts/anaylsis_of_algorithms/</loc>
+    <lastmod>2021-05-23T16:44:00-07:00</lastmod>
+  </url><url>
     <loc>https://dylanobata.github.io/</loc>
-    <lastmod>2021-05-12T23:35:49-07:00</lastmod>
+    <lastmod>2021-05-23T16:44:00-07:00</lastmod>
   </url><url>
     <loc>https://dylanobata.github.io/posts/</loc>
-    <lastmod>2021-05-12T23:35:49-07:00</lastmod>
+    <lastmod>2021-05-23T16:44:00-07:00</lastmod>
   </url><url>
     <loc>https://dylanobata.github.io/posts/what_is_an_algorithm/</loc>
     <lastmod>2021-05-12T23:35:49-07:00</lastmod>
