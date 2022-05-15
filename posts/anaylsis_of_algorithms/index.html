@@ -45,14 +45,6 @@
             </a>
         </li>
     
-        <li>
-            <a href="/portfolio/">
-                
-                <span>Portfolio</span>
-                
-            </a>
-        </li>
-    
 </ul>
 			</div>
 		</nav>
@@ -202,15 +194,15 @@ $$ c \ll \lg n \ll n \ll n \lg n \ll n^2 \ll 2^n \ll n!$$</dd>
 <p>Now we look at the fifth leftmost card, the <strong>Queen</strong>. Again we compare it to its neighbor to the left, which is the <strong>King</strong>. Since the <strong>King</strong> is bigger than the <strong>Queen</strong>, we swap the cards. Now we compare the <strong>Queen</strong> to its neighbor to the left again, which is the <strong>3</strong>, and since the <strong>Queen</strong> is bigger, we keep it in place and stop comparing since the cards to the left of it are sorted. Our new ordering is <strong>Ace, 2, 3, Queen, King</strong>.</p>
 <p>Finally, we check to see if there are anymore cards to sort and since there are none left, insertion sort is completed.</p>
 <p>Here&rsquo;s what the code for the process just described looks like written in Python.</p>
-<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#008000;font-weight:bold">def</span> <span style="color:#00f">insertionSort</span>(Array):
-    i <span style="color:#666">=</span> <span style="color:#666">1</span>
-    <span style="color:#008000;font-weight:bold">while</span> i <span style="color:#666">&lt;</span> <span style="color:#008000">len</span>(Array):
-        j <span style="color:#666">=</span> i
-        <span style="color:#008000;font-weight:bold">while</span> j <span style="color:#666">&gt;</span> <span style="color:#666">0</span> <span style="color:#a2f;font-weight:bold">and</span> Array[j<span style="color:#666">-</span><span style="color:#666">1</span>] <span style="color:#666">&gt;</span> Array[j]:
-            Array[j], Array[j<span style="color:#666">-</span><span style="color:#666">1</span>] <span style="color:#666">=</span> Array[j<span style="color:#666">-</span><span style="color:#666">1</span>], Array[j]
-            j <span style="color:#666">-=</span> <span style="color:#666">1</span>
-        i <span style="color:#666">+=</span> <span style="color:#666">1</span>
-</code></pre></div><p>To begin our worst-case analysis we should identify what the worst case is. If we are sorting an array from least to greatest, then the worst case is if the elements are ordered from greatest to least.</p>
+<div class="highlight"><pre tabindex="0" style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#008000;font-weight:bold">def</span> <span style="color:#00f">insertionSort</span>(Array):
+</span></span><span style="display:flex;"><span>    i <span style="color:#666">=</span> <span style="color:#666">1</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#008000;font-weight:bold">while</span> i <span style="color:#666">&lt;</span> <span style="color:#008000">len</span>(Array):
+</span></span><span style="display:flex;"><span>        j <span style="color:#666">=</span> i
+</span></span><span style="display:flex;"><span>        <span style="color:#008000;font-weight:bold">while</span> j <span style="color:#666">&gt;</span> <span style="color:#666">0</span> <span style="color:#a2f;font-weight:bold">and</span> Array[j<span style="color:#666">-</span><span style="color:#666">1</span>] <span style="color:#666">&gt;</span> Array[j]:
+</span></span><span style="display:flex;"><span>            Array[j], Array[j<span style="color:#666">-</span><span style="color:#666">1</span>] <span style="color:#666">=</span> Array[j<span style="color:#666">-</span><span style="color:#666">1</span>], Array[j]
+</span></span><span style="display:flex;"><span>            j <span style="color:#666">-=</span> <span style="color:#666">1</span>
+</span></span><span style="display:flex;"><span>        i <span style="color:#666">+=</span> <span style="color:#666">1</span>
+</span></span></code></pre></div><p>To begin our worst-case analysis we should identify what the worst case is. If we are sorting an array from least to greatest, then the worst case is if the elements are ordered from greatest to least.</p>
 <p>The inner <code>while</code> loop can execute, in worst case, <em>j</em> times, since in a reverse ordered array, we will have to move the <em>jth</em> element, <em>j</em> times to get it to the front of the array. Since each of the operations in the inner <code>while</code> loop are simple, they will take \(O(1)\) time, and so the inner <code>while</code> loop will have a runtime of \(O(j)\). For simplicity, we will say the inner loop has a runtime of \(O(n)\), assuming <em>n</em> is the length of the array. We can do this since \(j &lt; n\) so \(j = O(n)\).</p>
 <p>The outer <code>while</code> loop will execute \(n-1\) times since we start at 1 and end at \(n-1\). We will round this number up to <em>n</em>. For each iteration \(1, 2, \ldots , n\) of the outer <code>while</code> loop, the inner <code>while</code> loop will execute <em>j</em> times, which we rounded up to <em>n</em> as well. Thus, we have <em>n</em> iterations each taking <em>n</em> steps to complete, so we get a worst case runtime of \(O(n^2)\).</p>
 <p>Regarding the space complexity of the algorithm, the assignments <code>i=1</code> and <code>j=1</code> are \(O(1)\), and since we sorted the array in-place, insertion sort has an \(O(1)\) space complexity.</p>
@@ -231,7 +223,7 @@ $$ c \ll \lg n \ll n \ll n \lg n \ll n^2 \ll 2^n \ll n!$$</dd>
         		<footer>
 			
 			<span>
-			&copy; <time datetime="2022-01-04 09:09:49.84597 -0800 PST m=&#43;0.092193334">2022</time> Dylan Obata. 
+			&copy; <time datetime="2022-05-15 10:54:02.450359 -0700 PDT m=&#43;0.055256835">2022</time> Dylan Obata. 
 			</span>
 		</footer>
 
