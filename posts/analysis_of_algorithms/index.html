@@ -71,7 +71,7 @@
 <p>Simple instructions take <strong>one</strong> time step to execute.</p>
 </li>
 <li>
-<p>Loops, functions, and other complex instructions take one or more time steps to execute.</p>
+<p>Loops, functions, and other complex instructions take <strong>one or more</strong> time steps to execute.</p>
 </li>
 <li>
 <p>Memory access takes <strong>one</strong> time step and there is an infinite amount of memory.</p>
@@ -80,7 +80,7 @@
 <p>With this, we can begin to think about time and space complexity.</p>
 <h2 id="time-and-space-complexity">Time and Space Complexity</h2>
 <p>We can classify an algorithm&rsquo;s performance by its best-case, average-case, and worst-case time and space requirements. Performance is measured as a mathematical function on the length of the input. Instead of trying to precisely measure the  performance with an exact function, we try to provide general upper and lower bounds which limit the end behavior of the function. This allows us to drop constant multipliers and consider only the fastest growing term in the expression. For example, suppose we find out an algorithm takes exactly \(3n^2 + 2n + 1\) steps to execute. Instead of considering the entire expression, it is enough to say that this function grows quadratically with respect to the input size \(n\), or that it has a growth rate of \(n^2\).</p>
-<p>By providing bounds instead of an exact function, we simplify our analysis while still benefiting from useful estimates on the performance of the algorithm. It is common to plan for the worst-case scenario when analyzing an algorithm because it provides us with the strongest guarantee on performance and it is the easiest case to consider. The worst-case, best-case, and average-case complexities are denoted by \(O(f(n)), \Omega (f(n))\) and \(\Theta(f(n))\) respectively. These next few definitions will be a formalization of what we mean by bounding a function.</p>
+<p>By providing bounds instead of an exact function, we simplify our analysis while still benefiting from useful estimates on the performance of the algorithm. It is common to plan for the worst-case scenario when analyzing an algorithm because it provides us with the strongest guarantee on performance and it is the easiest case to consider. The worst-case, best-case, and average-case complexities are denoted by \(O(f(n)), \Omega (f(n))\) and \(\Theta(f(n))\) respectively. These next few definitions will formalize the intuitive notion of binding a function.</p>
 <dl>
 <dt><strong>Definition (Big O)</strong></dt>
 <dd>Let \(f\) and \(g\) be functions from the positive integers to the positive real numbers. We say \( f(n) = O(g(n)) \) if and only if there exists positive integers \(c &gt; 0 \) and \( n_0 &gt; 0 \) such that
@@ -223,7 +223,7 @@ $$ c \ll \lg n \ll n \ll n \lg n \ll n^2 \ll 2^n \ll n!$$</dd>
         		<footer>
 			
 			<span>
-			&copy; <time datetime="2022-06-07 11:24:39.812415 -0700 PDT m=&#43;0.097086418">2022</time> Dylan Obata. 
+			&copy; <time datetime="2022-06-07 11:28:52.881283 -0700 PDT m=&#43;0.042797751">2022</time> Dylan Obata. 
 			</span>
 		</footer>
 
